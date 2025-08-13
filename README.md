@@ -1,31 +1,39 @@
-
-
 # Primeros pasos
-
+Este ejercicio permite explorar los primeros conceptos de la programación orientada a objetos: construcción de objetos, métodos (consultas y acciones), accesors, parámetros, self.
 
 ### Ejercicio1: Comportamiento básico de Pepita
 
-* descansar()
-* volar(distancia)
+Pepita es una golondrina que cuenta con una cantidad de energía que le permite volar. Inicialmente cuenta con 100 unidades de energía, y cada vez que levanta vuelo, tiene un costo base de 10 unidades de energía (despegue) y por cada kilómetro recorrido se descuenta una unidad de energía.
+
+Además, pepita puede descansar para recuperar energía: cada vez que lo hace recupera 10 unidades.
+
+**Tareas:**  
+
+1. Definir el objeto pepita con la interfaz que le permita tener el comportamiento descripto
+
+2. Ejecutar el ambiente para interactuar con pepita, pidiendo que vuele 20 km y luego descanse ¿Cuánta energía tiene ahora?
 
 ### Ejercicio 2: Alimentar a pepita
 
-(interacción con otro objeto)
+Para incorporar energía, pepita come alpiste. El alpiste le aporta una determinada cantidad de energía (la cantidad específica que aporta es responsabilidad del objeto alpiste)
 
-* comer(alpiste)
+**Tareas:** 
 
-### Ejercicio 3: Comer otra cosa
-Ahora se necesita alimentar a Pepita con una manzana que le a
+1. Definir el método ``comer(alpiste)`` en el objeto pepita
 
-La manzana tiene un grado de madurez que inicia en 1
+2. Ejecutar el ambiente para hacer que pepita coma alpiste 2 veces ¿Cuánta energía tiene ahora?
 
-Se puede cambiar la madurez arbitrariamente --> setter
+### Ejercicio 3: Dieta variada
 
-La energía que aporta es una base (siempre 5) por la madurez -->  const
+Ahora se necesita alimentar a Pepita con una manzana que también le aporta energía en función de la madurez de la manzana. Mas específicamente, la energía que aporta la manzana es el producto entre un valor base (que en este contexto es siempre 5) y su madurez.
 
-La madurez puede variar en el tiempo. Cuando se le dice que madure, su maduréz aumenta en función de la energía que aporta 
-(madurez=madurez+self.energíaQueAporta()*0.1) --> self y subtareas
+Si bien al comienzo la manzana tiene un grado de madurez que inicia en 1, y que se este puede cambiar arbitrariamente (con un valor específico), además se puede aumentar la madurez a través de un mensaje que representa el paso del tiempo. Mediante este mensaje se le notifica a la manzana que ha pasado un día mas. Cuando esto ocurre, la madurez aumenta un 10 porciento de la energía que aporta.
 
-Este ejercicio permite ejercitar self ?
 
-* comer(manzana)
+**Tareas:** 
+
+1. Definir el objeto ``manzana`` siguiendo estos requerimientos
+
+2. Ejecutar el ambiente para hacer que pepita coma la manzana ¿Cuánta energía tiene ahora?
+
+3. Hacer que la manzana madure y luego que pepita la coma ¿Cuánta energía tiene ahora?

@@ -45,7 +45,7 @@ Si bien al comienzo la manzana tiene un grado de madurez que inicia en 1, y que 
 
 1. Definir el objeto ``manzana`` siguiendo estos requerimientos. 
 
-1. Verificar que pepita pueda comer tanto alpiste como manzanas, aumentanso su energía de manera diferente en cada caso. TIP: no debes usar una estructura condicional.
+1. Verificar que pepita pueda comer tanto alpiste como manzanas, aumentando su energía de manera diferente en cada caso. TIP: no debes usar una estructura condicional.
 
 1. Ejecutar  el siguiente escenario de prueba, asumiendo que pepita tiene una energía inicial de 100 unidades:
    * Hacer que pepita coma una manzana. La energía de pepita debe ser ahora de 105 unidades.

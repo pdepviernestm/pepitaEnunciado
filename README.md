@@ -27,9 +27,9 @@ Para incorporar energía, pepita come alpiste. El alpiste le aporta una determin
 
 1. Definir el objeto ``alpiste`` respetando los requerimientos descriptos, y asumiento que alpiste aporta 20 unidades de energía.
 
-2. Definir el método ``comer(alpiste)`` en el objeto pepita. 
+1. Definir el método ``comer(alpiste)`` en el objeto pepita. 
 
-2. Ejecutar  el siguiente escenario de prueba, asumiendo que pepita tiene una energía inicial de 100 unidades:
+1. Ejecutar  el siguiente escenario de prueba, asumiendo que pepita tiene una energía inicial de 100 unidades:
  
    * Hacer que pepita coma alpiste. Su energía debe aumentar a 120 unidades.
    * Nuevamente hacer que pepita coma alpiste. Su energía es ahora de 140 unidades.
@@ -47,9 +47,7 @@ Si bien al comienzo la manzana tiene un grado de madurez que inicia en 1, y que 
 
 1. Verificar que pepita pueda comer tanto alpiste como manzanas, aumentanso su energía de manera diferente en cada caso. TIP: no debes usar una estructura condicional.
 
-2. Ejecutar el ambiente para hacer que pepita coma la manzana ¿Cuánta energía tiene ahora?
-
-3. Ejecutar  el siguiente escenario de prueba, asumiendo que pepita tiene una energía inicial de 100 unidades:
+1. Ejecutar  el siguiente escenario de prueba, asumiendo que pepita tiene una energía inicial de 100 unidades:
    * Hacer que pepita coma una manzana. La energía de pepita debe ser ahora de 105 unidades.
    * Hacer que la manzana madure.  Entonces su madurez ahora vale 7.5
    * Hacer que pepita coma nuevamente manzana. La energía de pepita debe ser ahora de 112.5 unidades.

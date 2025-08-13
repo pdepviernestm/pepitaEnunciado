@@ -4,5 +4,4 @@ object pepita {
   method volar() {
     energia = energia - 10
   }
-
 }

@@ -11,17 +11,28 @@ Además, pepita puede descansar para recuperar energía: cada vez que lo hace re
 
 1. Definir el objeto pepita con la interfaz que le permita tener el comportamiento descripto
 
-2. Ejecutar el ambiente para interactuar con pepita, pidiendo que vuele 20 km y luego descanse ¿Cuánta energía tiene ahora?
-
-### Ejercicio 2: Alimentar a pepita
+2. Ejecutar el siguiente escenario de prueba, asumiendo que pepita tiene una energía inicial de 100 unidades:
+   
+   * Hacer volar a pepita 20 km. Su energía ahora se decrementó en 30 u, quedando en 70 unidades.
+   * Hacer que pepita descanse. Su energía aumenta 10 u.
+   * Verificar que la energía final de pepita es 80 unidades.
+    
+    
+# Ejercicio 2: Alimentar a pepita
 
 Para incorporar energía, pepita come alpiste. El alpiste le aporta una determinada cantidad de energía (la cantidad específica que aporta es responsabilidad del objeto alpiste)
 
 **Tareas:** 
 
-1. Definir el método ``comer(alpiste)`` en el objeto pepita
 
-2. Ejecutar el ambiente para hacer que pepita coma alpiste 2 veces ¿Cuánta energía tiene ahora?
+1. Definir el objeto ``alpiste`` respetando los requerimientos descriptos, y asumiento que alpiste aporta 20 unidades de energía.
+
+2. Definir el método ``comer(alpiste)`` en el objeto pepita. 
+
+2. Ejecutar  el siguiente escenario de prueba, asumiendo que pepita tiene una energía inicial de 100 unidades:
+ 
+   * Hacer que pepita coma alpiste. Su energía debe aumentar a 120 unidades.
+   * Nuevamente hacer que pepita coma alpiste. Su energía es ahora de 140 unidades.
 
 ### Ejercicio 3: Dieta variada
 
@@ -32,8 +43,13 @@ Si bien al comienzo la manzana tiene un grado de madurez que inicia en 1, y que 
 
 **Tareas:** 
 
-1. Definir el objeto ``manzana`` siguiendo estos requerimientos
+1. Definir el objeto ``manzana`` siguiendo estos requerimientos. 
+
+1. Verificar que pepita pueda comer tanto alpiste como manzanas, aumentanso su energía de manera diferente en cada caso. TIP: no debes usar una estructura condicional.
 
 2. Ejecutar el ambiente para hacer que pepita coma la manzana ¿Cuánta energía tiene ahora?
 
-3. Hacer que la manzana madure y luego que pepita la coma ¿Cuánta energía tiene ahora?
+3. Ejecutar  el siguiente escenario de prueba, asumiendo que pepita tiene una energía inicial de 100 unidades:
+   * Hacer que pepita coma una manzana. La energía de pepita debe ser ahora de 105 unidades.
+   * Hacer que la manzana madure.  Entonces su madurez ahora vale 7.5
+   * Hacer que pepita coma nuevamente manzana. La energía de pepita debe ser ahora de 112.5 unidades.

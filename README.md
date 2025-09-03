@@ -23,7 +23,7 @@ Por último, queremos poder preguntarle a pepita si está cansada. Sabemos que e
    * Hacer que pepita descanse. Su energía aumenta 10 calorías, llegando a 35.
    * Comprobar que, luego de descansar, pepita ya no está cansada.    
     
-# Ejercicio 2: Alimentar a pepita
+### Ejercicio 2: Alimentar a pepita
 
 Para incorporar energía, pepita come alpiste. El alpiste le aporta 25 calorías.
 

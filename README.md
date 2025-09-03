@@ -3,51 +3,48 @@ Este ejercicio permite explorar los primeros conceptos de la programación orien
 
 ### Ejercicio1: Comportamiento básico de Pepita
 
-Pepita es una golondrina que cuenta con una cantidad de energía que le permite volar. Inicialmente cuenta con 100 unidades de energía, y cada vez que levanta vuelo, tiene un costo base de 10 unidades de energía (despegue) y por cada kilómetro recorrido se descuenta una unidad de energía.
+Pepita es una golondrina que cuenta con una cantidad de energía que le permite volar. Cuando se le indica realizar alguna acción a pepita, su energía puede subir o bajar dependiendo del tipo de acción. Su energía inicial es de 100 calorías.
 
-Además, pepita puede descansar para recuperar energía: cada vez que lo hace recupera 10 unidades.
+* Al indicarle que vuele una cantidad de metros, consume diez calorías para despegar, más una caloría por cada diez metros recorridos.
+* Cada vez que le indicamos que descanse recupera 10 calorías.
+
+Por último, queremos poder preguntarle a pepita si está cansada. Sabemos que está cansada cuando su energía cae por debajo de las 30 calorías.
 
 **Tareas:**  
 
-1. Definir el objeto pepita con la interfaz que le permita tener el comportamiento descripto
+1. Definir el objeto pepita con la interfaz que le permita tener el comportamiento descripto.
 
 2. Ejecutar el siguiente escenario de prueba, asumiendo que pepita tiene una energía inicial de 100 unidades:
    
-   * Hacer volar a pepita 20 km. Su energía ahora se decrementó en 30 u, quedando en 70 unidades.
-   * Hacer que pepita descanse. Su energía aumenta 10 u.
-   * Verificar que la energía final de pepita es 80 unidades.
-    
+   * Hacer volar a pepita 200 m. Su energía ahora se decrementó en 30 calorías, quedando en 70 calorías.
+   * Verificar que no está cansada.
+   * Hacer volar a pepita otros 350 m, consumiendo 45 calorías adicionales para finalizar en 25 calorías.
+   * Ahora sí está cansada pepita.
+   * Hacer que pepita descanse. Su energía aumenta 10 calorías, llegando a 35.
+   * Comprobar que, luego de descansar, pepita ya no está cansada.    
     
 # Ejercicio 2: Alimentar a pepita
 
-Para incorporar energía, pepita come alpiste. El alpiste le aporta una determinada cantidad de energía (la cantidad específica que aporta es responsabilidad del objeto alpiste)
+Para incorporar energía, pepita come alpiste. El alpiste le aporta 25 calorías.
 
 **Tareas:** 
 
-
-1. Definir el objeto ``alpiste`` respetando los requerimientos descriptos, y asumiento que alpiste aporta 20 unidades de energía.
-
+1. Definir el objeto ``alpiste`` respetando los requerimientos descriptos.
 1. Definir el método ``comer(alpiste)`` en el objeto pepita. 
-
-1. Ejecutar  el siguiente escenario de prueba, asumiendo que pepita tiene una energía inicial de 100 unidades:
- 
-   * Hacer que pepita coma alpiste. Su energía debe aumentar a 120 unidades.
-   * Nuevamente hacer que pepita coma alpiste. Su energía es ahora de 140 unidades.
+1. Probar el siguiente escenario
+   * Hacer que pepita vuele 900m, luego de eso está cansada (su energía se redujo a 0).
+   * Hacer que pepita coma alpiste, sigue estando cansada (energía = 25 calorías).
+   * Nuevamente hacer que pepita coma alpiste y verificar que ya no está cansada (energía = 50 calorías).
 
 ### Ejercicio 3: Dieta variada
 
-Ahora se necesita alimentar a Pepita con una manzana que también le aporta energía en función de la madurez de la manzana. Mas específicamente, la energía que aporta la manzana es el producto entre un valor base (que en este contexto es siempre 5) y su madurez.
-
-Si bien al comienzo la manzana tiene un grado de madurez que inicia en 1, y que se este puede cambiar arbitrariamente (con un valor específico), además se puede aumentar la madurez a través de un mensaje que representa el paso del tiempo. Mediante este mensaje se le notifica a la manzana que ha pasado un día mas. Cuando esto ocurre, la madurez aumenta un 10 porciento de la energía que aporta.
-
+Ahora se necesita alimentar a Pepita con una manzana que también le aporta energía en función de la madurez de la manzana. 
+Inicialmente la manzana calorías en función de su grado de madurez, que es un valor que varía entre 0 y 3.
+Así, el aporte calórico de la manzana será de 20 calorías multiplicado por el grado de madurez.
+Sin embargo, si la manzana llega al grado 3 se pudre y su aporte calórico pasa a ser nulo.
 
 **Tareas:** 
 
-1. Definir el objeto ``manzana`` siguiendo estos requerimientos. 
-
-1. Verificar que pepita pueda comer tanto alpiste como manzanas, aumentando su energía de manera diferente en cada caso. TIP: no debes usar una estructura condicional.
-
-1. Ejecutar  el siguiente escenario de prueba, asumiendo que pepita tiene una energía inicial de 100 unidades:
-   * Hacer que pepita coma una manzana. La energía de pepita debe ser ahora de 105 unidades.
-   * Hacer que la manzana madure.  Ahora su madurez es 1.5 y la energia que comienza a aportar es de 7.5
-   * Hacer que pepita coma nuevamente manzana. La energía de pepita debe ser ahora de 112.5 unidades.
+1. Definir el objeto ``manzana`` siguiendo estos requerimientos.
+2. Verificar que pepita pueda comer tanto alpiste como manzanas, aumentando su energía de manera diferente en cada caso.
+3. Definir escenarios de prueba para combinar órdenes de comer y volar, validando los diferentes estadíos de la manzana.
